@@ -1,8 +1,0 @@
-function splitify(str) {
-  // Add your code below this line
-  let splitedString = str.split(/\W/);
-  return splitedString;
-
-  // Add your code above this line
-}
-splitify("Hello World,I-am code");

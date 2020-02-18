@@ -1,6 +1,0 @@
-function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  return arr.filter(val => num > val).length;;
-}
-
-getIndexToIns([], 1);

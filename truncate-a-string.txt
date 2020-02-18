@@ -1,8 +1,0 @@
-function truncateString(str, num) {
-  // Clear out that junk in your trunk
-  let strMod = (num < str.length ? (str.slice(0,num)+'...'):str);
-  console.log(strMod);
-  return strMod;
-}
-
-truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length);

@@ -1,6 +1,0 @@
-function myReplace(str, before, after) {
-  let afterChange = (before.search(/^[A-Z]/)===0)?(after[0].toUpperCase().concat(after.slice(1))):after;
-  return str.replace(before, afterChange);
-}
-
-console.log(myReplace("Let us go to the store", "store", "mall"));

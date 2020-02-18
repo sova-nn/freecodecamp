@@ -1,9 +1,0 @@
-function mutation(arr) {
-  let result = [];
-  arr.map(item => result.push(item.toLowerCase()));
-  for(let item of result[1]){
-    if (!result[0].includes(item)) return false;
-  } return true;
-}
-
-console.log(mutation(["Mary", "Army"]));
