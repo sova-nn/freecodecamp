@@ -1,0 +1,12 @@
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Add your code below this line
+  let myArr = arr.slice();
+  function compare(a,b) {
+    return (a==b)?(0):(a>b?(1):(-1));
+  } 
+  return myArr.sort(compare);
+  
+  // Add your code above this line
+}
+nonMutatingSort(globalArray);
