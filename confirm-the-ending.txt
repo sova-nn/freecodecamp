@@ -1,0 +1,8 @@
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  let newTarg = new RegExp(target + "$", "i");
+  return (newTarg.test(str));
+}
+
+confirmEnding("Bastian", "n");

@@ -1,0 +1,6 @@
+function myReplace(str, before, after) {
+  after = (before.search(/^[A-Z]/)===0)?(after[0].toUpperCase().concat(after.slice(1))):after;
+  return str.split(' ').map(item => (item === before)?after:item).join(' ');
+}
+
+console.log(myReplace("Let us go to the store", "store", "mall"));

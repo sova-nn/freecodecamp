@@ -1,0 +1,11 @@
+function sum(arr, n) {
+  // Only change code below this line
+  let total = 0;
+  (n == 0) ? (total += arr[n]) : (total += (sum(arr, n-1) + arr[n]));
+  
+
+  return total;
+  // Only change code above this line
+}
+
+console.log(sum([1,2,3,4], 2));
