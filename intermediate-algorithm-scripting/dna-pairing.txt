@@ -1,0 +1,23 @@
+function pairElement(str) {
+  let result = str.split('');
+  let res = [];
+  str.split('').map(char => {
+    switch(char) {
+      case 'G':
+        res.push((char).replace(/[G]/, 'GC').split(''));
+        break;
+      case 'C':
+        res.push((char).replace(/[C]/, 'CG').split(''));
+        break;
+      case 'T':
+        res.push((char).replace(/[T]/, 'TA').split(''));
+        break;
+      case 'A':
+        res.push((char).replace(/[A]/, 'AT').split(''));
+        break;
+    }    
+  })
+  return res;
+}
+
+console.log(pairElement("TTGAG"));

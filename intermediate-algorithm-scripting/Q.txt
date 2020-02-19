@@ -1,0 +1,21 @@
+function uniteUnique(...arr) {
+  console.log('Массив для сета: '+ arr);
+  let set = new Set(arr);
+
+  const uniqueArray = (arr) => Array.from(new Set(arr));
+  let aaa1 = uniqueArray(arr);
+  console.log('Output: '+ arr.length);
+  
+  //arrForSet.map(item => set.add(item));
+ 
+  return set;
+}
+
+const uniqueArray = (array) => Array.from(new Set(array));
+let aaa = uniqueArray([1,2,3,1,3,4]);
+console.log('Сет из массива: '+ aaa);
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+Мне не понятно, чем в данном примере будет arr - псевдомассивб массив? 
+Arr ведет себя как массив массивов (исходя из того, что ему передали), но при выводе в консоли отображается как просто набор значений, но в то же время имеет длину = 3.

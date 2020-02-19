@@ -1,0 +1,21 @@
+function steamrollArray(arr) {
+  // I'm a steamroller, baby
+  let regexp = /[0-9]/;
+  let res = [];
+  let arrMod = arr.toString();
+  
+  arrMod.split(',').map(item => {
+    if(item>='0' & item<='9'){
+      return res.push(Number(item))
+    } else if ((item >= 'A' & item <= 'Z') |(item >= 'a' & item <= 'z')) {
+        return res.push(String(item))
+    } else if (item == '[object Object]'){
+        return res.push({});
+    }
+  });
+ 
+  console.log(res);
+  return res;
+}
+
+console.log(steamrollArray([1, [], [3, [[4]]]]));

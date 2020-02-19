@@ -1,0 +1,14 @@
+function uniteUnique(...arr) {
+  console.log('Массив для сета: '+ arr);
+  let arrMod = [];
+  arr.map(item => arrMod.push(item));
+  console.log('Приведение к нормальному массиву: ', arrMod);
+  let newArr = arrMod.reduce((prev, item) => [...prev, ...item], []);
+  console.log('Приведение к нормальному массиву: ', newArr);
+
+  //функция для приведения к сету значений
+  const uniqueArray = (arr) => Array.from(new Set(arr));
+  return uniqueArray(newArr);
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));

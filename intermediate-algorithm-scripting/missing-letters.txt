@@ -1,0 +1,11 @@
+function fearNotLetter(str) {
+  let result;
+  for (let j=1; j<str.length;j++) {
+    if (str.codePointAt(j)-str.codePointAt(j-1)!=1) {
+      result = String.fromCodePoint(str.codePointAt(j-1) + 1);
+    }
+  }
+  return result;
+}
+
+fearNotLetter("abcdefghijklmnopqrstuvwxyz");

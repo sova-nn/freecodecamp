@@ -1,0 +1,9 @@
+function uniteUnique(...arr) {
+  console.log('Массив для сета: '+ arr);
+  let arrMod = [].concat(...arr);
+  console.log('Приведение к нормальному массиву: ', arrMod);
+
+  return [...new Set(arrMod)];
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));

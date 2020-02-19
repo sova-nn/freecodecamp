@@ -1,0 +1,23 @@
+function smallestCommons(arr) {
+  let maxNum = Math.max.apply(null, arr);
+  let minNum = Math.min.apply(null, arr);
+  let result = maxNum;
+  //counters i, j
+  let i = 1;
+  let j;
+ 
+  do {
+    result = maxNum * i;
+    for (j = minNum; j < maxNum; j++) {
+      if (result % j !== 0) {
+        break;
+      }
+    }
+    i++;
+  } while (j !== maxNum);
+
+  return result;
+}
+
+
+console.log(smallestCommons([23, 18]));
